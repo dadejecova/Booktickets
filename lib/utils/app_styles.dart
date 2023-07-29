@@ -12,3 +12,4 @@ class Styles{
   static TextStyle headLinesStyle3 = TextStyle(fontSize: 17, color: textColor, fontWeight: FontWeight.w500);
   static TextStyle headLinesStyle4 = TextStyle(fontSize: 14, color: Colors.grey.shade500, fontWeight: FontWeight.bold);
 }
+//1.21.01
