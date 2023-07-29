@@ -11,14 +11,36 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      "Good Morning" //55,19
+                    const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                            "Good Morning" //55,19
+                        ),
+                        Text(
+                            "Book Tickets" //55,19
+                        ),
+                      ],
                     ),
-                    Image.asset("assets/images/img_logo.png")
+                    Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: const DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                              "assets/images/img_logo.png"
+                          )
+                        )
+                      ),
+                    )
                   ],
                 )
               ],
