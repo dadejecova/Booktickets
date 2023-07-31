@@ -3,6 +3,7 @@ import 'package:booktickets/utils/app_styles.dart';
 import 'package:booktickets/widgets/thick_container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class TicketView extends StatelessWidget {
   const TicketView({super.key});
@@ -17,6 +18,7 @@ class TicketView extends StatelessWidget {
         margin: const EdgeInsets.only(left: 16),
         child: Column(
           children: [
+            //Showing the blue card
             Container(
               decoration: const BoxDecoration(
                 color: Color(0xFF526799),
@@ -59,12 +61,45 @@ class TicketView extends StatelessWidget {
 
                       ThickContainer(),
                       Expanded(child: Container()),
-                      Text("London", style: Styles.headLinesStyle3,),
+                      Text("LDN", style: Styles.headLinesStyle3.copyWith(color: Colors.white)),
                     ],
-                  )
+                  ),
+                  const Gap(5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 100, child: Text('New-York', style: Styles.headLinesStyle4.copyWith(color: Colors.white),),
+                      ),
+                      Text("8H 30M", style: Styles.headLinesStyle3.copyWith(color: Colors.white),),
+                      SizedBox(
+                        width: 100, child: Text('London', textAlign: TextAlign.end,style: Styles.headLinesStyle4.copyWith(color: Colors.white),),
+                      ),
+                    ],
+                  ),
                 ],
               ),
-            )
+            ),
+            //Showing the orange card
+            Container(
+              color: Styles.orangeColor,
+              child: const Row(
+                children: [
+                  SizedBox(
+                    height: 20,
+                    width: 10,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
+                        )
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
