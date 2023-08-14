@@ -2,6 +2,7 @@ import 'package:booktickets/utils/app_layout.dart';
 import 'package:booktickets/utils/app_styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class HotelScreen extends StatelessWidget {
   const HotelScreen({super.key});
@@ -40,7 +41,22 @@ class HotelScreen extends StatelessWidget {
                 )
               )
             ),
-          )
+          ),
+          const Gap(15),
+          Text(
+            "Open Space",
+            style: Styles.headLinesStyle2.copyWith(color: Styles.kakiColor),
+          ),
+          const Gap(15),
+          Text(
+            "London",
+            style: Styles.headLinesStyle3.copyWith(color: Colors.white),
+          ),
+          const Gap(15),
+          Text(
+            "\$40 / Night",
+            style: Styles.headLinesStyle.copyWith(color: Styles.kakiColor),
+          ),
         ],
       ),
     );
