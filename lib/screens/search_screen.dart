@@ -1,5 +1,6 @@
 import 'package:booktickets/utils/app_layout.dart';
 import 'package:booktickets/utils/app_styles.dart';
+import 'package:booktickets/widgets/icon_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -14,7 +15,7 @@ class SearchScreen extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20), vertical: AppLayout.getHeight(20)),
         children: [
-          Gap(AppLayout.getHeight(40)),
+          Gap(AppLayout.getHeight(80)),
           Text("What are \nyou looking for?", style: Styles.headLinesStyle.copyWith(fontSize: AppLayout.getWidth(35)),),
           Gap(AppLayout.getHeight(40)),
           FittedBox(
@@ -49,7 +50,12 @@ class SearchScreen extends StatelessWidget {
                 color: const Color(0xFFF4F6FD),
               ),
             ),
-          )
+          ),
+          Gap(AppLayout.getHeight(25)),
+          const AppIconText(icon: Icons.flight_takeoff_rounded, text: "Departure"),
+          Gap(AppLayout.getHeight(25)),
+          const AppIconText(icon: Icons.flight_takeoff_rounded, text: "Departure"),
+          //3:50:30
         ],
       ),
     );
