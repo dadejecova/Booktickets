@@ -1,11 +1,13 @@
 import 'package:booktickets/utils/app_layout.dart';
 import 'package:booktickets/utils/app_styles.dart';
+import 'package:booktickets/widgets/double_text_widget.dart';
 import 'package:booktickets/widgets/icon_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -53,9 +55,23 @@ class SearchScreen extends StatelessWidget {
           ),
           Gap(AppLayout.getHeight(25)),
           const AppIconText(icon: Icons.flight_takeoff_rounded, text: "Departure"),
+          Gap(AppLayout.getHeight(20)),
+          const AppIconText(icon: Icons.flight_land_rounded, text: "Arrival"),
           Gap(AppLayout.getHeight(25)),
-          const AppIconText(icon: Icons.flight_takeoff_rounded, text: "Departure"),
-          //3:50:30
+          Container(
+            padding: EdgeInsets.symmetric(
+                vertical: AppLayout.getWidth(18),
+                horizontal: AppLayout.getWidth(15)),
+            decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(AppLayout.getWidth(10))
+            ),
+            child: Center(child: Text("Find the tickets", style: Styles.textStyle.copyWith(color: Colors.white, fontSize: 20)))
+          ),
+          Gap(AppLayout.getHeight(40)),
+          const AppDoubleTextWidget(bigText: "asduhasdhaushd", smallText: "View All"),
+          Gap(AppLayout.getHeight(25)),
+          //4 horas
         ],
       ),
     );
